@@ -3,18 +3,25 @@
 * {
     display:flex;
     flex-direction: column;
-    /* border: 3px solid black; */
+    font-family: monospace, 'Times New Roman', Times, serif;
    
 
 }
 
 body {
-     background-image: url(pictures/ocean-floor_o.jpg)
+     background-image: url(pictures/ocean-floor_o.jpg);
+     justify-content: center;
+     align-items: center;
 }
 
 #title {
     align-items: center;
+    justify-content: center;
     padding: 10px;
+    background-color: gold;
+    border-radius: 20%;
+    margin: 1%;
+    width: 65vw;
 }
 
 #calculator {
