@@ -6,18 +6,72 @@
     border: 3px solid black;
 }
 
+#title {
+    align-items: center;
+}
+
+#calculator {
+    justify-content: center;
+    align-items: center;
+}
+
+#topDisplay {
+    display: flex;
+    flex-direction: row;
+    height:10vh;
+    width: 50vw;
+}
+
+#clearButton {
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+}
+
+#display {
+    flex: 6;
+    padding: 10px;
+}
+
 #keypad {
-    
+    /* flex:1; */
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 50vw;
+}
+
+#number {
+    flex:3;
+    height:100%;
+    align-items: stretch;
 }
 
 .numberSet {
-    
+    /* flex:1; */
     flex-direction: row;
+    height:100%;
 }
 
 .numberSet > * {
-    padding:20px 10px;
+    /* padding:20px 10px; */
+    flex:1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.operators {
+    height: 100%;
+    flex: 1;
+}
+
+.operators > * {
+    padding:10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
