@@ -1,0 +1,23 @@
+
+
+* {
+    display:flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+
+#keypad {
+    
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.numberSet {
+    
+    flex-direction: row;
+}
+
+.numberSet > * {
+    padding:20px 10px;
+}
