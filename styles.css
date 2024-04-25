@@ -3,23 +3,38 @@
 * {
     display:flex;
     flex-direction: column;
-    border: 3px solid black;
+    /* border: 3px solid black; */
+   
+
+}
+
+body {
+     background-image: url(pictures/ocean-floor_o.jpg)
 }
 
 #title {
     align-items: center;
+    padding: 10px;
 }
 
 #calculator {
     justify-content: center;
     align-items: center;
+    /* background-color:whitesmoke; */
+    border-radius: 10px;
+    
 }
 
 #topDisplay {
     display: flex;
+    border-top: solid 5px darkgray;
+    border-right: solid 5px darkgray;
+    border-left: solid 5px darkgray;
     flex-direction: row;
     height:10vh;
     width: 50vw;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 #clearButton {
@@ -27,21 +42,33 @@
     justify-content: center;
     align-items: center;
     flex:1;
+    background-color: lightcoral;
+    border-top-left-radius: 10px;
+    font-size: 20px;
 }
 
 #display {
     flex: 6;
     padding: 10px;
+    background-color: white;
+    border-top-right-radius: 10px;
 }
 
 #keypad {
-    /* flex:1; */
+    /* border-top: solid 5px darkgray; */
+    border-right: solid 5px darkgray;
+    border-left: solid 5px darkgray;
+    border-bottom: solid 5px darkgray;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     height: 60vh;
     width: 50vw;
+    background-color: whitesmoke;
+    font-size: 40px; 
 }
 
 #number {
@@ -57,16 +84,40 @@
 }
 
 .numberSet > * {
-    /* padding:20px 10px; */
     flex:1;
     height: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
+}
+
+#numberSet123 {
+    border-top: solid 5px black;
+    border-left: solid 5px black;
+    border-right: solid 5px black;
+}
+
+#numberSet456 {
+    border-left: solid 5px black;
+    border-right: solid 5px black;
+
+}
+
+#numberSet789 {
+    border-right: solid 5px black;
+    border-left: solid 5px black;
+    border-bottom: solid 5px black;
+    border-bottom-left-radius: 10px;
 }
 
 .operators {
     height: 100%;
     flex: 1;
+    background-color: lightblue;
+    border-bottom-right-radius: 20px;
+}
+
+#equalButton {
+    background-color: lightcoral;
 }
 
 .operators > * {
@@ -74,4 +125,59 @@
     height: 100%;
     justify-content: center;
     align-items: center;
+    /* border-top: solid 5px black;
+    border-right: solid 5px black;
+    border-left: solid 5px black;
+    border-bottom: solid 5px black; */
+}
+
+
+#numberTwo{
+    border-right: solid 5px black;
+    border-left: solid 5px black;
+}
+
+#numberFour{
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+}
+#numberFive{
+    border-top: solid 5px black;
+    border-right: solid 5px black;
+    border-left: solid 5px black;
+    border-bottom: solid 5px black;
+}
+#numberSix{
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+}
+
+#numberEight{
+    border-right: solid 5px black;
+    border-left: solid 5px black;
+}
+
+#plusButton{
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+    border-right: solid 5px black;
+}
+
+#minusButton{
+    border-bottom: solid 5px black;
+    border-right: solid 5px black;
+}
+
+#dividButton{
+    border-bottom: solid 5px black;
+    border-right: solid 5px black;
+}
+#multiplyButton{
+    border-bottom: solid 5px black;
+    border-right: solid 5px black;
+}
+#equalButton{
+    border-bottom: solid 5px black;
+    border-right: solid 5px black;
+    border-bottom-right-radius: 10px;
 }
