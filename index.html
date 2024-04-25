@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"  ></script>
+    <script src="script.js" defer ></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    
 </head>
 <body>
     <div>
@@ -13,37 +13,37 @@
     </div>
     <div>
         <div>
-            <div id="clearButton"></div>
+            <div id="clearButton">Clear</div>
             <div id="display"></div>
         </div>
-        <div>
+        <div id="keypad">
             <div>
-                <div>
-                    <div id="numberOne"></div>
-                    <div id="numberTwo"></div>
-                    <div id="numberThree"></div>
+                <div class="numberSet">
+                    <div id="numberOne">1</div>
+                    <div id="numberTwo">2</div>
+                    <div id="numberThree">3</div>
                 </div>
-                <div>
-                    <div id="numberFour"></div>
-                    <div id="numberFive"></div>
-                    <div id="numberSix"></div>
+                <div class="numberSet">
+                    <div id="numberFour">4</div>
+                    <div id="numberFive">5</div>
+                    <div id="numberSix">6</div>
                 </div>
-                <div>
-                    <div id="numberSeven"></div>
-                    <div id="numberEight"></div>
-                    <div id="numberNine"></div>
+                <div class="numberSet">
+                    <div id="numberSeven">7</div>
+                    <div id="numberEight">8</div>
+                    <div id="numberNine">9</div>
                 </div>
             </div>
-            <div>
-                <div id="plusButton"></div>
-                <div id="minusButton"></div>
-                <div id="dividButton"></div>
-                <div id="multiplyButton"></div>
-                <div id="equalButton"></div>
+            <div class="operators">
+                <div id="plusButton">+</div>
+                <div id="minusButton">-</div>
+                <div id="dividButton">/</div>
+                <div id="multiplyButton">*</div>
+                <div id="equalButton">=</div>
             </div>
         </div>
     </div>
-    <div>
+    <div>history
 
     </div>
 </body>
