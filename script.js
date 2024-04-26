@@ -42,7 +42,9 @@ plus.addEventListener('click', (event) => {
 minus.addEventListener('click', (event) => {});
 divid.addEventListener('click', (event) => {});
 multiply.addEventListener('click', (event) => {});
-equal.addEventListener('click', (event) => {});
+equal.addEventListener('click', (event) => {
+    display.textcontent = evalEquation()
+});
 
 clear.addEventListener('click', (event) => {});
 
@@ -61,10 +63,38 @@ let displayArr = [];
         display.textContent = commaDel;
     };
 
-
+// function to add opperators
     function addOppDis(x) {
         displayArr.push(" ",x, " ");
         ammendDisplay();
     
     };
 
+// function for condensing array to equation pieces
+    let equationArr = []
+    let numSet = "";
+    function concatEqu(arrayNum) {
+        
+        if (typeof(Number(arrayNum)) === "number" ) {
+            numSet.concat(arrayNum);
+        } else {
+            equationArr.push(numSet);
+            equationArr.push(arrayNum);
+            let numSet = ""
+        }
+    };
+// function for evaluating array as math opperation
+
+    function evalEquation() {
+        displayArr.map(concatEqu);
+        let answer = null;
+            equationArr.forEach((x) => {
+            
+                if (typeof(Number(x)) === "number") {
+                    answer += Number(x)
+                } else {
+                    answer += x
+                }}
+            )
+        
+    };
