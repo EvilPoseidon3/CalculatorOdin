@@ -74,27 +74,33 @@ let displayArr = [];
     let equationArr = []
     let numSet = "";
     function concatEqu(arrayNum) {
-        
-        if (typeof(Number(arrayNum)) === "number" ) {
-            numSet.concat(arrayNum);
+        // console.log(displayArr);
+        if (typeof(arrayNum) === "number" ) {
+            numSet += arrayNum.toString();
         } else {
             equationArr.push(numSet);
-            equationArr.push(arrayNum);
-            let numSet = ""
+            if (arrayNum.length > 0 ) {equationArr.push(arrayNum)};
+            numSet = ""
         }
     };
 // function for evaluating array as math opperation
 
     function evalEquation() {
         displayArr.map(concatEqu);
-        let answer = null;
+        let answer = 0;
             equationArr.forEach((x) => {
-            
+                console.log(equationArr);
                 if (typeof(Number(x)) === "number") {
                     answer += Number(x)
                 } else {
                     answer += x
                 }}
             )
-        
+            console.log(Number("1000+500-45"))
+        return answer
     };
+
+
+
+    // try joining with array join() and use a space, then splice
+    // it together using string method splice() then run it like an equation
