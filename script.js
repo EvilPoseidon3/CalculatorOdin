@@ -27,21 +27,50 @@ two.addEventListener('click', (event) => {
     addNumDis(2)
 });
 
-three.addEventListener('click', (event) => {});
-four.addEventListener('click', (event) => {});
-five.addEventListener('click', (event) => {});
-six.addEventListener('click', (event) => {});
-seven.addEventListener('click', (event) => {});
-eight.addEventListener('click', (event) => {});
-nine.addEventListener('click', (event) => {});
+three.addEventListener('click', (event) => {
+    addNumDis(3)
+});
+
+four.addEventListener('click', (event) => {
+    addNumDis(4)
+});
+
+five.addEventListener('click', (event) => {
+    addNumDis(5)
+});
+
+six.addEventListener('click', (event) => {
+    addNumDis(6)
+});
+
+seven.addEventListener('click', (event) => {
+    addNumDis(7)
+});
+
+eight.addEventListener('click', (event) => {
+    addNumDis(8)
+});
+
+nine.addEventListener('click', (event) => {
+    addNumDis(9)
+});
 
 plus.addEventListener('click', (event) => {
     addOppDis("+")
 });
 
-minus.addEventListener('click', (event) => {});
-divid.addEventListener('click', (event) => {});
-multiply.addEventListener('click', (event) => {});
+minus.addEventListener('click', (event) => {
+    addOppDis("-")
+});
+
+divid.addEventListener('click', (event) => {
+    addOppDis("/")
+});
+
+multiply.addEventListener('click', (event) => {
+    addOppDis("*")
+});
+
 equal.addEventListener('click', (event) => {
     let answer = evalEquation()
     console.log(answer)
@@ -74,36 +103,43 @@ let displayArr = [];
 
     function evalEquation() {
         let broArr = (displayArr.join('')).split(' ');
-console.log(typeof Number(broArr[0]))
+
+            console.log(displayArr);
+            console.log(broArr);
+
+        if ( broArr[0] === "" || broArr[broArr.length - 1] === "")
+            { return "Error"}
+
+       
+            while (broArr.includes('*')){
             for (let i = 0; i < broArr.length; i++) {
-                if (typeof Number(broArr[0]) !== "number" || typeof Number(broArr[broArr.length - 1]) !== 'number')
-                { return "Error"}
-                else if (broArr[i] === "*") 
+                
+                 if (broArr[i] === "*") 
                 {broArr.splice(i-1, 3, (Number(broArr[i-1]) * Number(broArr[i+1])))}
                 
-            }
+            }}
+            while (broArr.includes('/')){
             for (let i = 0; i < broArr.length; i++) {
-                if (typeof Number(broArr[0]) !== "number" || typeof Number(broArr[broArr.length - 1]) !== 'number')
-                { return "Error"}
-                else if (broArr[i] === "/") 
+                
+                 if (broArr[i] === "/") 
                 {broArr.splice(i-1, 3, (Number(broArr[i-1]) / Number(broArr[i+1])))}
                 
-            }
+            }}
+            while (broArr.includes('+')){
             for (let i = 0; i < broArr.length; i++) {
-                if (typeof Number(broArr[0]) !== "number" || typeof Number(broArr[broArr.length - 1]) !== 'number')
-                { return "Error"}
-                else if (broArr[i] === "+") 
+                
+                 if (broArr[i] === "+") 
                 {broArr.splice(i-1, 3, (Number(broArr[i-1]) + Number(broArr[i+1])))}
                 
-            }
+            }}
+            while (broArr.includes('-')){
             for (let i = 0; i < broArr.length; i++) {
-                if (typeof Number(broArr[0]) !== "number" || typeof Number(broArr[broArr.length - 1]) !== 'number')
-                { return "Error"}
-                else if (broArr[i] === "-") 
+                
+                 if (broArr[i] === "-") 
                 {broArr.splice(i-1, 3, (Number(broArr[i-1]) - Number(broArr[i+1])))}
                 
-            }
-
+            }}
+        
             return (broArr.toString())
     }
 
