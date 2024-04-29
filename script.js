@@ -43,7 +43,9 @@ minus.addEventListener('click', (event) => {});
 divid.addEventListener('click', (event) => {});
 multiply.addEventListener('click', (event) => {});
 equal.addEventListener('click', (event) => {
-    display.textcontent = evalEquation()
+    let answer = evalEquation()
+    console.log(answer)
+    display.textContent = answer
 });
 
 clear.addEventListener('click', (event) => {});
@@ -70,36 +72,40 @@ let displayArr = [];
     
     };
 
-// function for condensing array to equation pieces
-    let equationArr = []
-    let numSet = "";
-    function concatEqu(arrayNum) {
-        // console.log(displayArr);
-        if (typeof(arrayNum) === "number" ) {
-            numSet += arrayNum.toString();
-        } else {
-            equationArr.push(numSet);
-            if (arrayNum.length > 0 ) {equationArr.push(arrayNum)};
-            numSet = ""
-        }
-    };
-// function for evaluating array as math opperation
-
     function evalEquation() {
-        displayArr.map(concatEqu);
-        let answer = 0;
-            equationArr.forEach((x) => {
-                console.log(equationArr);
-                if (typeof(Number(x)) === "number") {
-                    answer += Number(x)
-                } else {
-                    answer += x
-                }}
-            )
-            console.log(Number("1000+500-45"))
-        return answer
-    };
+        let broArr = (displayArr.join('')).split(' ');
+console.log(typeof Number(broArr[0]))
+            for (let i = 0; i < broArr.length; i++) {
+                if (typeof Number(broArr[0]) !== "number" || typeof Number(broArr[broArr.length - 1]) !== 'number')
+                { return "Error"}
+                else if (broArr[i] === "*") 
+                {broArr.splice(i-1, 3, (Number(broArr[i-1]) * Number(broArr[i+1])))}
+                
+            }
+            for (let i = 0; i < broArr.length; i++) {
+                if (typeof Number(broArr[0]) !== "number" || typeof Number(broArr[broArr.length - 1]) !== 'number')
+                { return "Error"}
+                else if (broArr[i] === "/") 
+                {broArr.splice(i-1, 3, (Number(broArr[i-1]) / Number(broArr[i+1])))}
+                
+            }
+            for (let i = 0; i < broArr.length; i++) {
+                if (typeof Number(broArr[0]) !== "number" || typeof Number(broArr[broArr.length - 1]) !== 'number')
+                { return "Error"}
+                else if (broArr[i] === "+") 
+                {broArr.splice(i-1, 3, (Number(broArr[i-1]) + Number(broArr[i+1])))}
+                
+            }
+            for (let i = 0; i < broArr.length; i++) {
+                if (typeof Number(broArr[0]) !== "number" || typeof Number(broArr[broArr.length - 1]) !== 'number')
+                { return "Error"}
+                else if (broArr[i] === "-") 
+                {broArr.splice(i-1, 3, (Number(broArr[i-1]) - Number(broArr[i+1])))}
+                
+            }
 
+            return (broArr.toString())
+    }
 
 
     // try joining with array join() and use a space, then splice
