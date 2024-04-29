@@ -10,6 +10,8 @@ let six = document.querySelector('#numberSix');
 let seven = document.querySelector('#numberSeven');
 let eight = document.querySelector('#numberEight');
 let nine = document.querySelector('#numberNine');
+let zero = document.querySelector('#numberZero');
+let period = document.querySelector('#numberPeriod');
 
 let plus = document.querySelector('#plusButton');
 let minus = document.querySelector('#minusButton');
@@ -18,6 +20,11 @@ let multiply = document.querySelector('#multiplyButton');
 let equal = document.querySelector('#equalButton');
 
 let historyDisplay = document.querySelector('#historyDisplay');
+
+clear.addEventListener('click', (event) => {
+    displayArr = []
+    display.textContent = displayArr
+})
 
 one.addEventListener('click', (event) => {
     addNumDis(1)
@@ -53,6 +60,14 @@ eight.addEventListener('click', (event) => {
 
 nine.addEventListener('click', (event) => {
     addNumDis(9)
+});
+
+zero.addEventListener('click', (event) => {
+    addNumDis(0)
+});
+
+period.addEventListener('click', (event) => {
+    addNumDis(".")
 });
 
 plus.addEventListener('click', (event) => {
