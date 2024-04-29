@@ -51,7 +51,9 @@ body {
     flex:1;
     background-color: lightcoral;
     border-top-left-radius: 10px;
-    font-size: 20px;
+    font-size: 40px;
+    border-left: solid 5px black;
+    border-top: solid 5px black;
 }
 
 #display {
@@ -59,6 +61,12 @@ body {
     padding: 10px;
     background-color: white;
     border-top-right-radius: 10px;
+    align-items:start;
+    justify-content: center;
+    padding: 20px;
+    border-left: solid 5px black;
+    border-right: solid 5px black;
+    border-top:solid 5px black;
 }
 
 #keypad {
@@ -113,6 +121,13 @@ body {
     border-right: solid 5px black;
     border-left: solid 5px black;
     border-bottom: solid 5px black;
+    
+}
+
+#numberSet0period{
+    border-left: solid 5px black;
+    border-bottom: solid 5px black;
+    border-right: solid 5px black;
     border-bottom-left-radius: 10px;
 }
 
@@ -187,4 +202,13 @@ body {
     border-bottom: solid 5px black;
     border-right: solid 5px black;
     border-bottom-right-radius: 10px;
+}
+
+#numberZero {
+    flex:22;
+    border-right: solid 5px black;
+} 
+
+#numberPeriod {
+    flex:7;
 }
