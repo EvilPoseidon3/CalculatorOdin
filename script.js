@@ -1,5 +1,6 @@
 let clear = document.querySelector('#clearButton');
 let display = document.querySelector('#display');
+let backspace = document.querySelector('#backspace');
 
 let one = document.querySelector('#numberOne');
 let two = document.querySelector('#numberTwo');
@@ -92,7 +93,14 @@ equal.addEventListener('click', (event) => {
     display.textContent = answer
 });
 
-clear.addEventListener('click', (event) => {});
+backspace.addEventListener('click', (event) => {
+
+    if (displayArr[displayArr.length -1] === " "){
+        displayArr.pop();
+        displayArr.pop();
+    } else ( displayArr.pop())
+    ammendDisplay();
+});
 
 // function for adding a number to the display array
 let displayArr = [];
